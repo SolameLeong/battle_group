@@ -1,0 +1,131 @@
+body {
+    background-color: #444444;
+    text-align: center;
+    font-family: Microsoft YaHei;
+    color: white;
+}
+
+#mainTitle {
+    color: white;
+    display: inline-block;
+}
+
+#subTitle {
+    color: white;
+    margin-bottom: 50px;
+}
+
+#locate {
+    width: 780px;
+    margin: 50px auto;
+
+}
+
+.btn {
+    margin-right: 10px;
+    margin-top: 5px;
+    width: 55px;
+    color: #fff;
+    background-color: #5bc0de;
+    border-color: #46b8da;
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    border-radius: 4px;
+    user-select: none;
+}
+
+#groupBattle {
+    margin: 0 auto;
+    font-size: 14px;
+}
+.group {
+    width: 600px;
+    border: 1px solid black;
+}
+.group > table {
+    margin: 0 auto;
+}
+.match>td {
+    padding: 0;
+}
+
+.match {
+    width: 126px;
+    padding: 0;
+}
+.player {
+    margin-top: 3px;
+    margin-bottom: 3px;
+    height: 22px;
+}
+
+.player>div {
+    float: left;
+}
+.match {
+    margin-top: -2px;
+}
+
+.num {
+    width: 26px;
+    height: 22px;
+    background-color: #888888;
+}
+
+.name {
+    width:120px;
+    height: 22px;
+    background-color: #222222;
+}
+
+.promotion {
+    height: 24px;
+    float: left;
+    margin-top: -2px;
+    border: #ffffff solid 0;
+}
+.m1 .promotion {
+    border-bottom-width: 2px;
+    width: 14px;
+}
+.m2 .promotion {
+    width: 12px;
+    height: 28px;
+    border-right-width: 2px;
+}
+.m3 .promotion {
+    width: 12px;
+    height: 27px;
+    margin-top: -4px;
+    border-right-width: 2px;
+}
+.m4 .promotion {
+    width: 14px;
+    margin-top: -3px;
+    border-top-width: 2px;
+}
+.hLine {
+    width: 35px;
+    height: 2px;
+    background-color: #ffffff;
+    margin-left: -8px;
+}
+.hLine2 {
+    width: 35px;
+    height: 2px;
+    background-color: #ffffff;
+    margin-left: -4px;
+}
+.turn2 div {
+    margin-left: -2px;
+}
+.winner {
+    margin-left: -4px;
+}

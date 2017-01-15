@@ -1,0 +1,2040 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="UTF-8">
+    <title>百度口袋妖怪吧寒假实机对战大赛</title>
+    <script src="vue.min.js"></script>
+    <script src="vue-resource.min.js"></script>
+</head>
+<body>
+    <div id="mainTitle">
+        <h1>百度口袋妖怪吧寒假实机对战大赛</h1>
+    </div>
+    <div id="subTitle">
+        <h2>小组对阵表</h2>
+    </div>
+
+    <div id="locate">
+        <a type="button" class="btn btn-info groupButton" href="#group0">0 组</a>
+        <a type="button" class="btn btn-info groupButton" href="#group1">1 组</a>
+        <a type="button" class="btn btn-info groupButton" href="#group2">2 组</a>
+        <a type="button" class="btn btn-info groupButton" href="#group3">3 组</a>
+        <a type="button" class="btn btn-info groupButton" href="#group4">4 组</a>
+        <a type="button" class="btn btn-info groupButton" href="#group5">5 组</a>
+        <a type="button" class="btn btn-info groupButton" href="#group6">6 组</a>
+        <a type="button" class="btn btn-info groupButton" href="#group7">7 组</a>
+        <a type="button" class="btn btn-info groupButton" href="#group8">8 组</a>
+        <a type="button" class="btn btn-info groupButton" href="#group9">9 组</a>
+        <a type="button" class="btn btn-info groupButton" href="#groupA">A 组</a>
+        <a type="button" class="btn btn-info groupButton" href="#groupB">B 组</a>
+        <a type="button" class="btn btn-info groupButton" href="#groupC">C 组</a>
+        <a type="button" class="btn btn-info groupButton" href="#groupD">D 组</a>
+        <a type="button" class="btn btn-info groupButton" href="#groupE">E 组</a>
+        <a type="button" class="btn btn-info groupButton" href="#groupF">F 组</a>
+        <a type="button" class="btn btn-info groupButton" href="#groupG">G 组</a>
+        <a type="button" class="btn btn-info groupButton" href="#groupH">H 组</a>
+        <a type="button" class="btn btn-info groupButton" href="#groupI">I 组</a>
+        <a type="button" class="btn btn-info groupButton" href="#groupJ">J 组</a>
+        <a type="button" class="btn btn-info groupButton" href="#groupK">K 组</a>
+        <a type="button" class="btn btn-info groupButton" href="#groupL">L 组</a>
+        <a type="button" class="btn btn-info groupButton" href="#groupM">M 组</a>
+        <a type="button" class="btn btn-info groupButton" href="#groupN">N 组</a>
+        <a type="button" class="btn btn-info groupButton" href="#groupO">O 组</a>
+        <a type="button" class="btn btn-info groupButton" href="#groupP">P 组</a>
+        <a type="button" class="btn btn-info groupButton" href="#groupQ">Q 组</a>
+        <a type="button" class="btn btn-info groupButton" href="#groupR">R 组</a>
+        <a type="button" class="btn btn-info groupButton" href="#groupS">S 组</a>
+        <a type="button" class="btn btn-info groupButton" href="#groupT">T 组</a>
+        <a type="button" class="btn btn-info groupButton" href="#groupU">U 组</a>
+        <a type="button" class="btn btn-info groupButton" href="#groupV">V 组</a>
+    </div>
+
+    <table id="groupBattle">
+        <tr>
+            <td id="group0" class="group">
+                <h2>0组</h2>
+                <table>
+                    <tr>
+                        <td id="g0t1">
+                            <table>
+                                <tr id="match0-1" class="match">
+                                    <td>
+                                        <div id="zero1" class="player m1">
+                                            <div class="num">01</div>
+                                            <div class="name">{{ namelist[0].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                        <div id="zero2" class="player m2">
+                                            <div class="num">02</div>
+                                            <div class="name">{{ namelist[1].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr id="match0-2" class="match">
+                                    <td>
+                                        <div id="zero3" class="player m3">
+                                            <div class="num">03</div>
+                                            <div class="name">{{ namelist[2].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                        <div id="zero4" class="player m4">
+                                            <div class="num">04</div>
+                                            <div class="name">{{ namelist[3].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td>
+                            <div class="hLine"></div>
+                        </td>
+                        <td class="turn2">
+                            <div  class="player">
+                                <div class="num"></div>
+                                <div class="name"></div>
+                            </div>
+                            <div  class="player">
+                                <div class="num"></div>
+                                <div class="name"></div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="hLine2"></div>
+                        </td>
+                        <td>
+                            <div class="player winner">
+                                <div class="num"></div>
+                                <div class="name"></div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td id="group1" class="group">
+                <h2>1组</h2>
+                <table>
+                    <tr>
+                        <td id="g1t1">
+                            <table>
+                                <tr id="match1-1" class="match">
+                                    <td>
+                                        <div id="one1" class="player m1">
+                                            <div class="num">11</div>
+                                            <div class="name">{{ namelist[4].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                        <div id="one2" class="player m2">
+                                            <div class="num">12</div>
+                                            <div class="name">{{ namelist[5].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr id="match1-2" class="match">
+                                    <td>
+                                        <div id="one3" class="player m3">
+                                            <div class="num">13</div>
+                                            <div class="name">{{ namelist[6].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                        <div id="one4" class="player m4">
+                                            <div class="num">14</div>
+                                            <div class="name">{{ namelist[7].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td>
+                            <div class="hLine"></div>
+                        </td>
+                        <td class="turn2">
+                            <div  class="player">
+                                <div class="num"></div>
+                                <div class="name"></div>
+                            </div>
+                            <div  class="player">
+                                <div class="num"></div>
+                                <div class="name"></div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="hLine2"></div>
+                        </td>
+                        <td>
+                            <div class="player winner">
+                                <div class="num"></div>
+                                <div class="name"></div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td id="group2" class="group">
+                <h2>2组</h2>
+                <table>
+                    <tr>
+                        <td id="g2t1">
+                            <table>
+                                <tr id="match2-1" class="match">
+                                    <td>
+                                        <div id="two1" class="player m1">
+                                            <div class="num">21</div>
+                                            <div class="name">{{ namelist[8].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                        <div id="two2" class="player m2">
+                                            <div class="num">22</div>
+                                            <div class="name">{{ namelist[9].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr id="match2-2" class="match">
+                                    <td>
+                                        <div id="two3" class="player m3">
+                                            <div class="num">23</div>
+                                            <div class="name">{{ namelist[10].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                        <div id="two4" class="player m4">
+                                            <div class="num">24</div>
+                                            <div class="name">{{ namelist[11].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td>
+                            <div class="hLine"></div>
+                        </td>
+                        <td class="turn2">
+                            <div  class="player">
+                                <div class="num"></div>
+                                <div class="name"></div>
+                            </div>
+                            <div  class="player">
+                                <div class="num"></div>
+                                <div class="name"></div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="hLine2"></div>
+                        </td>
+                        <td>
+                            <div class="player winner">
+                                <div class="num"></div>
+                                <div class="name"></div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td id="group3" class="group">
+                <h2>3组</h2>
+                <table>
+                    <tr>
+                        <td id="g3t1">
+                            <table>
+                                <tr id="match3-1" class="match">
+                                    <td>
+                                        <div id="three1" class="player m1">
+                                            <div class="num">31</div>
+                                            <div class="name">{{ namelist[12].name }}d</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                        <div id="three2" class="player m2">
+                                            <div class="num">32</div>
+                                            <div class="name">{{ namelist[13].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr id="match3-2" class="match">
+                                    <td>
+                                        <div id="three3" class="player m3">
+                                            <div class="num">33</div>
+                                            <div class="name">{{ namelist[14].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                        <div id="three4" class="player m4">
+                                            <div class="num">34</div>
+                                            <div class="name">{{ namelist[15].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td>
+                            <div class="hLine"></div>
+                        </td>
+                        <td class="turn2">
+                            <div  class="player">
+                                <div class="num"></div>
+                                <div class="name"></div>
+                            </div>
+                            <div  class="player">
+                                <div class="num"></div>
+                                <div class="name"></div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="hLine2"></div>
+                        </td>
+                        <td>
+                            <div class="player winner">
+                                <div class="num"></div>
+                                <div class="name"></div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        <tr>
+            <td id="group4" class="group">
+            <h2>4组</h2>
+            <table>
+                <tr>
+                    <td id="g4t1">
+                        <table>
+                            <tr id="match4-1" class="match">
+                                <td>
+                                    <div id="four1" class="player m1">
+                                        <div class="num">41</div>
+                                        <div class="name">{{ namelist[16].name }}</div>
+                                        <div class="promotion"></div>
+                                    </div>
+                                    <div id="four2" class="player m2">
+                                        <div class="num">42</div>
+                                        <div class="name">{{ namelist[17].name }}</div>
+                                        <div class="promotion"></div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr id="match4-2" class="match">
+                                <td>
+                                    <div id="four3" class="player m3">
+                                        <div class="num">43</div>
+                                        <div class="name">{{ namelist[18].name }}</div>
+                                        <div class="promotion"></div>
+                                    </div>
+                                    <div id="four4" class="player m4">
+                                        <div class="num">44</div>
+                                        <div class="name">{{ namelist[19].name }}</div>
+                                        <div class="promotion"></div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td>
+                        <div class="hLine"></div>
+                    </td>
+                    <td class="turn2">
+                        <div  class="player">
+                            <div class="num"></div>
+                            <div class="name"></div>
+                        </div>
+                        <div  class="player">
+                            <div class="num"></div>
+                            <div class="name"></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="hLine2"></div>
+                    </td>
+                    <td>
+                        <div class="player winner">
+                            <div class="num"></div>
+                            <div class="name"></div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </td>
+            <td id="group5" class="group">
+            <h2>5组</h2>
+            <table>
+                <tr>
+                    <td id="g5t1">
+                        <table>
+                            <tr id="match5-1" class="match">
+                                <td>
+                                    <div id="five1" class="player m1">
+                                        <div class="num">51</div>
+                                        <div class="name">{{ namelist[20].name }}</div>
+                                        <div class="promotion"></div>
+                                    </div>
+                                    <div id="five2" class="player m2">
+                                        <div class="num">52</div>
+                                        <div class="name">{{ namelist[21].name }}</div>
+                                        <div class="promotion"></div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr id="match5-2" class="match">
+                                <td>
+                                    <div id="five3" class="player m3">
+                                        <div class="num">53</div>
+                                        <div class="name">{{ namelist[22].name }}</div>
+                                        <div class="promotion"></div>
+                                    </div>
+                                    <div id="five4" class="player m4">
+                                        <div class="num">54</div>
+                                        <div class="name">{{ namelist[23].name }}</div>
+                                        <div class="promotion"></div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td>
+                        <div class="hLine"></div>
+                    </td>
+                    <td class="turn2">
+                        <div  class="player">
+                            <div class="num"></div>
+                            <div class="name"></div>
+                        </div>
+                        <div  class="player">
+                            <div class="num"></div>
+                            <div class="name"></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="hLine2"></div>
+                    </td>
+                    <td>
+                        <div class="player winner">
+                            <div class="num"></div>
+                            <div class="name"></div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </td>
+        </tr>
+        <tr>
+            <td id="group6" class="group">
+                <h2>6组</h2>
+                <table>
+                    <tr>
+                        <td id="g6t1">
+                            <table>
+                                <tr id="match6-1" class="match">
+                                    <td>
+                                        <div id="six1" class="player m1">
+                                            <div class="num"></div>
+                                            <div class="name">{{ namelist[24].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                        <div id="six2" class="player m2">
+                                            <div class="num">62</div>
+                                            <div class="name">{{ namelist[25].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr id="match6-2" class="match">
+                                    <td>
+                                        <div id="six3" class="player m3">
+                                            <div class="num">63</div>
+                                            <div class="name">{{ namelist[26].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                        <div id="six4" class="player m4">
+                                            <div class="num">64</div>
+                                            <div class="name">{{ namelist[27].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td>
+                            <div class="hLine"></div>
+                        </td>
+                        <td class="turn2">
+                            <div  class="player">
+                                <div class="num"></div>
+                                <div class="name"></div>
+                            </div>
+                            <div  class="player">
+                                <div class="num"></div>
+                                <div class="name"></div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="hLine2"></div>
+                        </td>
+                        <td>
+                            <div class="player winner">
+                                <div class="num"></div>
+                                <div class="name"></div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td id="group7" class="group">
+                <h2>7组</h2>
+                <table>
+                    <tr>
+                        <td id="g7t1">
+                            <table>
+                                <tr id="match7-1" class="match">
+                                    <td>
+                                        <div id="seven1" class="player m1">
+                                            <div class="num">71</div>
+                                            <div class="name">{{ namelist[28].name }}人</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                        <div id="seven2" class="player m2">
+                                            <div class="num">72</div>
+                                            <div class="name">{{ namelist[29].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr id="match7-2" class="match">
+                                    <td>
+                                        <div id="seven3" class="player m3">
+                                            <div class="num">73</div>
+                                            <div class="name">{{ namelist[30].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                        <div id="seven4" class="player m4">
+                                            <div class="num">74</div>
+                                            <div class="name">{{ namelist[31].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td>
+                            <div class="hLine"></div>
+                        </td>
+                        <td class="turn2">
+                            <div  class="player">
+                                <div class="num"></div>
+                                <div class="name"></div>
+                            </div>
+                            <div  class="player">
+                                <div class="num"></div>
+                                <div class="name"></div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="hLine2"></div>
+                        </td>
+                        <td>
+                            <div class="player winner">
+                                <div class="num"></div>
+                                <div class="name"></div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td id="group8" class="group">
+                <h2>8组</h2>
+                <table>
+                    <tr>
+                        <td id="g8t1">
+                            <table>
+                                <tr id="match8-1" class="match">
+                                    <td>
+                                        <div id="eight1" class="player m1">
+                                            <div class="num">81</div>
+                                            <div class="name">{{ namelist[32].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                        <div id="eight2" class="player m2">
+                                            <div class="num">82</div>
+                                            <div class="name">{{ namelist[33].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr id="match8-2" class="match">
+                                    <td>
+                                        <div id="eight3" class="player m3">
+                                            <div class="num">83</div>
+                                            <div class="name">{{ namelist[34].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                        <div id="eight4" class="player m4">
+                                            <div class="num">84</div>
+                                            <div class="name">{{ namelist[35].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td>
+                            <div class="hLine"></div>
+                        </td>
+                        <td class="turn2">
+                            <div  class="player">
+                                <div class="num"></div>
+                                <div class="name"></div>
+                            </div>
+                            <div  class="player">
+                                <div class="num"></div>
+                                <div class="name"></div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="hLine2"></div>
+                        </td>
+                        <td>
+                            <div class="player winner">
+                                <div class="num"></div>
+                                <div class="name"></div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td id="group9" class="group">
+                <h2>9组</h2>
+                <table>
+                    <tr>
+                        <td id="g9t1">
+                            <table>
+                                <tr id="match9-1" class="match">
+                                    <td>
+                                        <div id="nine1" class="player m1">
+                                            <div class="num">91</div>
+                                            <div class="name">{{ namelist[36].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                        <div id="nine2" class="player m2">
+                                            <div class="num">92</div>
+                                            <div class="name">{{ namelist[37].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr id="match9-2" class="match">
+                                    <td>
+                                        <div id="nine3" class="player m3">
+                                            <div class="num">93</div>
+                                            <div class="name">{{ namelist[38].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                        <div id="nine4" class="player m4">
+                                            <div class="num">94</div>
+                                            <div class="name">{{ namelist[39].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td>
+                            <div class="hLine"></div>
+                        </td>
+                        <td class="turn2">
+                            <div  class="player">
+                                <div class="num"></div>
+                                <div class="name"></div>
+                            </div>
+                            <div  class="player">
+                                <div class="num"></div>
+                                <div class="name"></div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="hLine2"></div>
+                        </td>
+                        <td>
+                            <div class="player winner">
+                                <div class="num"></div>
+                                <div class="name"></div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td id="groupA" class="group">
+                <h2>A组</h2>
+                <table>
+                    <tr>
+                        <td id="gAt1">
+                            <table>
+                                <tr id="matchA-1" class="match">
+                                    <td>
+                                        <div id="A1" class="player m1">
+                                            <div class="num">A1</div>
+                                            <div class="name">{{ namelist[40].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                        <div id="A2" class="player m2">
+                                            <div class="num">A2</div>
+                                            <div class="name">{{ namelist[41].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr id="matchA-2" class="match">
+                                    <td>
+                                        <div id="A3" class="player m3">
+                                            <div class="num">A3</div>
+                                            <div class="name">{{ namelist[42].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                        <div id="A4" class="player m4">
+                                            <div class="num">A4</div>
+                                            <div class="name">{{ namelist[43].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td>
+                            <div class="hLine"></div>
+                        </td>
+                        <td class="turn2">
+                            <div  class="player">
+                                <div class="num"></div>
+                                <div class="name"></div>
+                            </div>
+                            <div  class="player">
+                                <div class="num"></div>
+                                <div class="name"></div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="hLine2"></div>
+                        </td>
+                        <td>
+                            <div class="player winner">
+                                <div class="num"></div>
+                                <div class="name"></div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td id="groupB" class="group">
+                <h2>B组</h2>
+                <table>
+                    <tr>
+                        <td id="gBt1">
+                            <table>
+                                <tr id="matchB-1" class="match">
+                                    <td>
+                                        <div id="B1" class="player m1">
+                                            <div class="num">B1</div>
+                                            <div class="name">{{ namelist[44].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                        <div id="B2" class="player m2">
+                                            <div class="num">B2</div>
+                                            <div class="name">{{ namelist[45].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr id="matchB-2" class="match">
+                                    <td>
+                                        <div id="B3" class="player m3">
+                                            <div class="num">B3</div>
+                                            <div class="name">{{ namelist[46].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                        <div id="B4" class="player m4">
+                                            <div class="num">B4</div>
+                                            <div class="name">{{ namelist[47].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td>
+                            <div class="hLine"></div>
+                        </td>
+                        <td class="turn2">
+                            <div  class="player">
+                                <div class="num"></div>
+                                <div class="name"></div>
+                            </div>
+                            <div  class="player">
+                                <div class="num"></div>
+                                <div class="name"></div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="hLine2"></div>
+                        </td>
+                        <td>
+                            <div class="player winner">
+                                <div class="num"></div>
+                                <div class="name"></div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td id="groupC" class="group">
+                <h2>C组</h2>
+                <table>
+                    <tr>
+                        <td id="gCt1">
+                            <table>
+                                <tr id="matchC-1" class="match">
+                                    <td>
+                                        <div id="C1" class="player m1">
+                                            <div class="num">C1</div>
+                                            <div class="name">{{ namelist[48].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                        <div id="C2" class="player m2">
+                                            <div class="num">C2</div>
+                                            <div class="name">{{ namelist[49].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr id="matchC-2" class="match">
+                                    <td>
+                                        <div id="C3" class="player m3">
+                                            <div class="num">C3</div>
+                                            <div class="name">{{ namelist[50].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                        <div id="C4" class="player m4">
+                                            <div class="num">C4</div>
+                                            <div class="name">{{ namelist[51].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td>
+                            <div class="hLine"></div>
+                        </td>
+                        <td class="turn2">
+                            <div  class="player">
+                                <div class="num"></div>
+                                <div class="name"></div>
+                            </div>
+                            <div  class="player">
+                                <div class="num"></div>
+                                <div class="name"></div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="hLine2"></div>
+                        </td>
+                        <td>
+                            <div class="player winner">
+                                <div class="num"></div>
+                                <div class="name"></div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td id="groupD" class="group">
+                <h2>D组</h2>
+                <table>
+                    <tr>
+                        <td id="gDt1">
+                            <table>
+                                <tr id="matchD-1" class="match">
+                                    <td>
+                                        <div id="D1" class="player m1">
+                                            <div class="num">D1</div>
+                                            <div class="name">{{ namelist[52].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                        <div id="D2" class="player m2">
+                                            <div class="num">D2</div>
+                                            <div class="name">{{ namelist[53].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr id="matchD-2" class="match">
+                                    <td>
+                                        <div id="D3" class="player m3">
+                                            <div class="num">D3</div>
+                                            <div class="name">{{ namelist[54].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                        <div id="D4" class="player m4">
+                                            <div class="num">D4</div>
+                                            <div class="name">{{ namelist[55].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td>
+                            <div class="hLine"></div>
+                        </td>
+                        <td class="turn2">
+                            <div  class="player">
+                                <div class="num"></div>
+                                <div class="name"></div>
+                            </div>
+                            <div  class="player">
+                                <div class="num"></div>
+                                <div class="name"></div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="hLine2"></div>
+                        </td>
+                        <td>
+                            <div class="player winner">
+                                <div class="num"></div>
+                                <div class="name"></div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td id="groupE" class="group">
+                <h2>E组</h2>
+                <table>
+                    <tr>
+                        <td id="gEt1">
+                            <table>
+                                <tr id="matchE-1" class="match">
+                                    <td>
+                                        <div id="E1" class="player m1">
+                                            <div class="num">E1</div>
+                                            <div class="name">{{ namelist[56].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                        <div id="E2" class="player m2">
+                                            <div class="num">E2</div>
+                                            <div class="name">{{ namelist[57].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr id="matchE-2" class="match">
+                                    <td>
+                                        <div id="E3" class="player m3">
+                                            <div class="num">E3</div>
+                                            <div class="name">{{ namelist[58].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                        <div id="E4" class="player m4">
+                                            <div class="num">E4</div>
+                                            <div class="name">{{ namelist[59].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td>
+                            <div class="hLine"></div>
+                        </td>
+                        <td class="turn2">
+                            <div  class="player">
+                                <div class="num"></div>
+                                <div class="name"></div>
+                            </div>
+                            <div  class="player">
+                                <div class="num"></div>
+                                <div class="name"></div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="hLine2"></div>
+                        </td>
+                        <td>
+                            <div class="player winner">
+                                <div class="num"></div>
+                                <div class="name"></div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td id="groupF" class="group">
+                <h2>F组</h2>
+                <table>
+                    <tr>
+                        <td id="gFt1">
+                            <table>
+                                <tr id="matchF-1" class="match">
+                                    <td>
+                                        <div id="F1" class="player m1">
+                                            <div class="num">F1</div>
+                                            <div class="name">{{ namelist[60].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                        <div id="F2" class="player m2">
+                                            <div class="num"></div>
+                                            <div class="name">{{ namelist[61].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr id="matchF-2" class="match">
+                                    <td>
+                                        <div id="F3" class="player m3">
+                                            <div class="num">F3</div>
+                                            <div class="name">{{ namelist[62].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                        <div id="F4" class="player m4">
+                                            <div class="num">F4</div>
+                                            <div class="name">{{ namelist[63].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td>
+                            <div class="hLine"></div>
+                        </td>
+                        <td class="turn2">
+                            <div  class="player">
+                                <div class="num"></div>
+                                <div class="name"></div>
+                            </div>
+                            <div  class="player">
+                                <div class="num"></div>
+                                <div class="name"></div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="hLine2"></div>
+                        </td>
+                        <td>
+                            <div class="player winner">
+                                <div class="num"></div>
+                                <div class="name"></div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td id="groupG" class="group">
+                <h2>G组</h2>
+                <table>
+                    <tr>
+                        <td id="gGt1">
+                            <table>
+                                <tr id="matchG-1" class="match">
+                                    <td>
+                                        <div id="G1" class="player m1">
+                                            <div class="num">G1</div>
+                                            <div class="name">{{ namelist[64].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                        <div id="G2" class="player m2">
+                                            <div class="num">G2</div>
+                                            <div class="name">{{ namelist[65].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr id="matchG-2" class="match">
+                                    <td>
+                                        <div id="G3" class="player m3">
+                                            <div class="num">G3</div>
+                                            <div class="name">{{ namelist[66].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                        <div id="G4" class="player m4">
+                                            <div class="num">G4</div>
+                                            <div class="name">{{ namelist[67].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td>
+                            <div class="hLine"></div>
+                        </td>
+                        <td class="turn2">
+                            <div  class="player">
+                                <div class="num"></div>
+                                <div class="name"></div>
+                            </div>
+                            <div  class="player">
+                                <div class="num"></div>
+                                <div class="name"></div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="hLine2"></div>
+                        </td>
+                        <td>
+                            <div class="player winner">
+                                <div class="num"></div>
+                                <div class="name"></div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td id="groupH" class="group">
+                <h2>H组</h2>
+                <table>
+                    <tr>
+                        <td id="gHt1">
+                            <table>
+                                <tr id="matchH-1" class="match">
+                                    <td>
+                                        <div id="H1" class="player m1">
+                                            <div class="num">H1</div>
+                                            <div class="name">{{ namelist[68].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                        <div id="H2" class="player m2">
+                                            <div class="num">H2</div>
+                                            <div class="name">{{ namelist[69].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr id="matchH-2" class="match">
+                                    <td>
+                                        <div id="h2" class="player m3">
+                                            <div class="num">h2</div>
+                                            <div class="name">{{ namelist[70].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                        <div id="H4" class="player m4">
+                                            <div class="num">H4</div>
+                                            <div class="name">{{ namelist[71].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td>
+                            <div class="hLine"></div>
+                        </td>
+                        <td class="turn2">
+                            <div  class="player">
+                                <div class="num"></div>
+                                <div class="name"></div>
+                            </div>
+                            <div  class="player">
+                                <div class="num"></div>
+                                <div class="name"></div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="hLine2"></div>
+                        </td>
+                        <td>
+                            <div class="player winner">
+                                <div class="num"></div>
+                                <div class="name"></div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td id="groupI" class="group">
+                <h2>I组</h2>
+                <table>
+                    <tr>
+                        <td id="gIt1">
+                            <table>
+                                <tr id="matchI-1" class="match">
+                                    <td>
+                                        <div id="I1" class="player m1">
+                                            <div class="num">I1</div>
+                                            <div class="name">{{ namelist[72].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                        <div id="I2" class="player m2">
+                                            <div class="num">I2</div>
+                                            <div class="name">{{ namelist[73].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr id="matchI-2" class="match">
+                                    <td>
+                                        <div id="I3" class="player m3">
+                                            <div class="num">I3</div>
+                                            <div class="name">{{ namelist[74].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                        <div id="I4" class="player m4">
+                                            <div class="num">I4</div>
+                                            <div class="name">{{ namelist[75].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td>
+                            <div class="hLine"></div>
+                        </td>
+                        <td class="turn2">
+                            <div  class="player">
+                                <div class="num"></div>
+                                <div class="name"></div>
+                            </div>
+                            <div  class="player">
+                                <div class="num"></div>
+                                <div class="name"></div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="hLine2"></div>
+                        </td>
+                        <td>
+                            <div class="player winner">
+                                <div class="num"></div>
+                                <div class="name"></div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td id="groupJ" class="group">
+                <h2>J组</h2>
+                <table>
+                    <tr>
+                        <td id="gJt1">
+                            <table>
+                                <tr id="matchJ-1" class="match">
+                                    <td>
+                                        <div id="J1" class="player m1">
+                                            <div class="num">J1</div>
+                                            <div class="name">{{ namelist[76].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                        <div id="J2" class="player m2">
+                                            <div class="num">J2</div>
+                                            <div class="name">{{ namelist[77].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr id="matchJ-2" class="match">
+                                    <td>
+                                        <div id="J3" class="player m3">
+                                            <div class="num">J3</div>
+                                            <div class="name">{{ namelist[78].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                        <div id="J4" class="player m4">
+                                            <div class="num">J4</div>
+                                            <div class="name">{{ namelist[79].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td>
+                            <div class="hLine"></div>
+                        </td>
+                        <td class="turn2">
+                            <div  class="player">
+                                <div class="num"></div>
+                                <div class="name"></div>
+                            </div>
+                            <div  class="player">
+                                <div class="num"></div>
+                                <div class="name"></div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="hLine2"></div>
+                        </td>
+                        <td>
+                            <div class="player winner">
+                                <div class="num"></div>
+                                <div class="name"></div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td id="groupK" class="group">
+                <h2>K组</h2>
+                <table>
+                    <tr>
+                        <td id="gKt1">
+                            <table>
+                                <tr id="matchK-1" class="match">
+                                    <td>
+                                        <div id="K1" class="player m1">
+                                            <div class="num">K1</div>
+                                            <div class="name">{{ namelist[80].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                        <div id="K2" class="player m2">
+                                            <div class="num">K2</div>
+                                            <div class="name">{{ namelist[81].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr id="matchK-2" class="match">
+                                    <td>
+                                        <div id="K3" class="player m3">
+                                            <div class="num">K3</div>
+                                            <div class="name">{{ namelist[82].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                        <div id="K4" class="player m4">
+                                            <div class="num">K4</div>
+                                            <div class="name">{{ namelist[83].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td>
+                            <div class="hLine"></div>
+                        </td>
+                        <td class="turn2">
+                            <div  class="player">
+                                <div class="num"></div>
+                                <div class="name"></div>
+                            </div>
+                            <div  class="player">
+                                <div class="num"></div>
+                                <div class="name"></div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="hLine2"></div>
+                        </td>
+                        <td>
+                            <div class="player winner">
+                                <div class="num"></div>
+                                <div class="name"></div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td id="groupL" class="group">
+                <h2>L组</h2>
+                <table>
+                    <tr>
+                        <td id="gLt1">
+                            <table>
+                                <tr id="matchL-1" class="match">
+                                    <td>
+                                        <div id="L1" class="player m1">
+                                            <div class="num">L1</div>
+                                            <div class="name">{{ namelist[84].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                        <div id="L2" class="player m2">
+                                            <div class="num">L2</div>
+                                            <div class="name">{{ namelist[85].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr id="matchL-2" class="match">
+                                    <td>
+                                        <div id="L3" class="player m3">
+                                            <div class="num">L3</div>
+                                            <div class="name">{{ namelist[86].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                        <div id="L4" class="player m4">
+                                            <div class="num">L4</div>
+                                            <div class="name">{{ namelist[87].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td>
+                            <div class="hLine"></div>
+                        </td>
+                        <td class="turn2">
+                            <div  class="player">
+                                <div class="num"></div>
+                                <div class="name"></div>
+                            </div>
+                            <div  class="player">
+                                <div class="num"></div>
+                                <div class="name"></div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="hLine2"></div>
+                        </td>
+                        <td>
+                            <div class="player winner">
+                                <div class="num"></div>
+                                <div class="name"></div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td id="groupM" class="group">
+                <h2>M组</h2>
+                <table>
+                    <tr>
+                        <td id="gMt1">
+                            <table>
+                                <tr id="matchM-1" class="match">
+                                    <td>
+                                        <div id="M1" class="player m1">
+                                            <div class="num">M1</div>
+                                            <div class="name">{{ namelist[88].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                        <div id="M2" class="player m2">
+                                            <div class="num">M2</div>
+                                            <div class="name">{{ namelist[89].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr id="matchM-2" class="match">
+                                    <td>
+                                        <div id="M3" class="player m3">
+                                            <div class="num">M3</div>
+                                            <div class="name">{{ namelist[90].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                        <div id="M4" class="player m4">
+                                            <div class="num">M4</div>
+                                            <div class="name">{{ namelist[91].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td>
+                            <div class="hLine"></div>
+                        </td>
+                        <td class="turn2">
+                            <div  class="player">
+                                <div class="num"></div>
+                                <div class="name"></div>
+                            </div>
+                            <div  class="player">
+                                <div class="num"></div>
+                                <div class="name"></div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="hLine2"></div>
+                        </td>
+                        <td>
+                            <div class="player winner">
+                                <div class="num"></div>
+                                <div class="name"></div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td id="groupN" class="group">
+                <h2>N组</h2>
+                <table>
+                    <tr>
+                        <td id="gNt1">
+                            <table>
+                                <tr id="matchN-1" class="match">
+                                    <td>
+                                        <div id="N1" class="player m1">
+                                            <div class="num">N1</div>
+                                            <div class="name">{{ namelist[92].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                        <div id="N2" class="player m2">
+                                            <div class="num">N2</div>
+                                            <div class="name">{{ namelist[93].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr id="matchN-2" class="match">
+                                    <td>
+                                        <div id="N3" class="player m3">
+                                            <div class="num">N3</div>
+                                            <div class="name">{{ namelist[94].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                        <div id="N4" class="player m4">
+                                            <div class="num">N4</div>
+                                            <div class="name">{{ namelist[95].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td>
+                            <div class="hLine"></div>
+                        </td>
+                        <td class="turn2">
+                            <div  class="player">
+                                <div class="num"></div>
+                                <div class="name"></div>
+                            </div>
+                            <div  class="player">
+                                <div class="num"></div>
+                                <div class="name"></div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="hLine2"></div>
+                        </td>
+                        <td>
+                            <div class="player winner">
+                                <div class="num"></div>
+                                <div class="name"></div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td id="groupO" class="group">
+                <h2>O组</h2>
+                <table>
+                    <tr>
+                        <td id="gOt1">
+                            <table>
+                                <tr id="matchO-1" class="match">
+                                    <td>
+                                        <div id="O1" class="player m1">
+                                            <div class="num">O1</div>
+                                            <div class="name">{{ namelist[96].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                        <div id="O2" class="player m2">
+                                            <div class="num">O2</div>
+                                            <div class="name">{{ namelist[97].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr id="matchO-2" class="match">
+                                    <td>
+                                        <div id="O3" class="player m3">
+                                            <div class="num">O3</div>
+                                            <div class="name">{{ namelist[98].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                        <div id="O4" class="player m4">
+                                            <div class="num">O4</div>
+                                            <div class="name">{{ namelist[99].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td>
+                            <div class="hLine"></div>
+                        </td>
+                        <td class="turn2">
+                            <div  class="player">
+                                <div class="num"></div>
+                                <div class="name"></div>
+                            </div>
+                            <div  class="player">
+                                <div class="num"></div>
+                                <div class="name"></div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="hLine2"></div>
+                        </td>
+                        <td>
+                            <div class="player winner">
+                                <div class="num"></div>
+                                <div class="name"></div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td id="groupP" class="group">
+                <h2>P组</h2>
+                <table>
+                    <tr>
+                        <td id="gPt1">
+                            <table>
+                                <tr id="matchP-1" class="match">
+                                    <td>
+                                        <div id="P1" class="player m1">
+                                            <div class="num">P1</div>
+                                            <div class="name">{{ namelist[100].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                        <div id="P2" class="player m2">
+                                            <div class="num">P2</div>
+                                            <div class="name">{{ namelist[101].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr id="matchP-2" class="match">
+                                    <td>
+                                        <div id="P3" class="player m3">
+                                            <div class="num">P3</div>
+                                            <div class="name">{{ namelist[102].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                        <div id="P4" class="player m4">
+                                            <div class="num">P4</div>
+                                            <div class="name">{{ namelist[103].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td>
+                            <div class="hLine"></div>
+                        </td>
+                        <td class="turn2">
+                            <div  class="player">
+                                <div class="num"></div>
+                                <div class="name"></div>
+                            </div>
+                            <div  class="player">
+                                <div class="num"></div>
+                                <div class="name"></div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="hLine2"></div>
+                        </td>
+                        <td>
+                            <div class="player winner">
+                                <div class="num"></div>
+                                <div class="name"></div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td id="groupQ" class="group">
+                <h2>Q组</h2>
+                <table>
+                    <tr>
+                        <td id="gQt1">
+                            <table>
+                                <tr id="matchQ-1" class="match">
+                                    <td>
+                                        <div id="Q1" class="player m1">
+                                            <div class="num">Q1</div>
+                                            <div class="name">{{ namelist[104].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                        <div id="Q2" class="player m2">
+                                            <div class="num"></div>
+                                            <div class="name">{{ namelist[105].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr id="matchQ-2" class="match">
+                                    <td>
+                                        <div id="Q3" class="player m3">
+                                            <div class="num">Q3</div>
+                                            <div class="name">{{ namelist[106].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                        <div id="Q4" class="player m4">
+                                            <div class="num">Q4</div>
+                                            <div class="name">{{ namelist[107].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td>
+                            <div class="hLine"></div>
+                        </td>
+                        <td class="turn2">
+                            <div  class="player">
+                                <div class="num"></div>
+                                <div class="name"></div>
+                            </div>
+                            <div  class="player">
+                                <div class="num"></div>
+                                <div class="name"></div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="hLine2"></div>
+                        </td>
+                        <td>
+                            <div class="player winner">
+                                <div class="num"></div>
+                                <div class="name"></div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td id="groupR" class="group">
+                <h2>R组</h2>
+                <table>
+                    <tr>
+                        <td id="gRt1">
+                            <table>
+                                <tr id="matchR-1" class="match">
+                                    <td>
+                                        <div id="R1" class="player m1">
+                                            <div class="num">R1</div>
+                                            <div class="name">{{ namelist[108].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                        <div id="R2" class="player m2">
+                                            <div class="num">R2</div>
+                                            <div class="name">{{ namelist[109].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr id="matchR-2" class="match">
+                                    <td>
+                                        <div id="R3" class="player m3">
+                                            <div class="num">R3</div>
+                                            <div class="name">{{ namelist[110].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                        <div id="R4" class="player m4">
+                                            <div class="num">R4</div>
+                                            <div class="name">{{ namelist[111].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td>
+                            <div class="hLine"></div>
+                        </td>
+                        <td class="turn2">
+                            <div  class="player">
+                                <div class="num"></div>
+                                <div class="name"></div>
+                            </div>
+                            <div  class="player">
+                                <div class="num"></div>
+                                <div class="name"></div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="hLine2"></div>
+                        </td>
+                        <td>
+                            <div class="player winner">
+                                <div class="num"></div>
+                                <div class="name"></div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td id="groupS" class="group">
+                <h2>S组</h2>
+                <table>
+                    <tr>
+                        <td id="gSt1">
+                            <table>
+                                <tr id="matchS-1" class="match">
+                                    <td>
+                                        <div id="S1" class="player m1">
+                                            <div class="num">S1</div>
+                                            <div class="name">{{ namelist[112].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                        <div id="S2" class="player m2">
+                                            <div class="num">S2</div>
+                                            <div class="name">{{ namelist[113].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr id="matchS-2" class="match">
+                                    <td>
+                                        <div id="S3" class="player m3">
+                                            <div class="num">S3</div>
+                                            <div class="name">{{ namelist[114].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                        <div id="S4" class="player m4">
+                                            <div class="num">S4</div>
+                                            <div class="name">{{ namelist[115].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td>
+                            <div class="hLine"></div>
+                        </td>
+                        <td class="turn2">
+                            <div  class="player">
+                                <div class="num"></div>
+                                <div class="name"></div>
+                            </div>
+                            <div  class="player">
+                                <div class="num"></div>
+                                <div class="name"></div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="hLine2"></div>
+                        </td>
+                        <td>
+                            <div class="player winner">
+                                <div class="num"></div>
+                                <div class="name"></div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td id="groupT" class="group">
+                <h2>T组</h2>
+                <table>
+                    <tr>
+                        <td id="gTt1">
+                            <table>
+                                <tr id="matchT-1" class="match">
+                                    <td>
+                                        <div id="T1" class="player m1">
+                                            <div class="num">T1</div>
+                                            <div class="name">{{ namelist[116].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                        <div id="T2" class="player m2">
+                                            <div class="num">T2</div>
+                                            <div class="name">{{ namelist[117].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr id="matchT-2" class="match">
+                                    <td>
+                                        <div id="T3" class="player m3">
+                                            <div class="num">T3</div>
+                                            <div class="name">{{ namelist[118].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                        <div id="T4" class="player m4">
+                                            <div class="num">T4</div>
+                                            <div class="name">{{ namelist[119].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td>
+                            <div class="hLine"></div>
+                        </td>
+                        <td class="turn2">
+                            <div  class="player">
+                                <div class="num"></div>
+                                <div class="name"></div>
+                            </div>
+                            <div  class="player">
+                                <div class="num"></div>
+                                <div class="name"></div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="hLine2"></div>
+                        </td>
+                        <td>
+                            <div class="player winner">
+                                <div class="num"></div>
+                                <div class="name"></div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td id="groupU" class="group">
+                <h2>U组</h2>
+                <table>
+                    <tr>
+                        <td id="gUt1">
+                            <table>
+                                <tr id="matchU-1" class="match">
+                                    <td>
+                                        <div id="U1" class="player m1">
+                                            <div class="num">U1</div>
+                                            <div class="name">{{ namelist[120].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                        <div id="U2" class="player m2">
+                                            <div class="num">U2</div>
+                                            <div class="name">{{ namelist[121].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr id="matchU-2" class="match">
+                                    <td>
+                                        <div id="U3" class="player m3">
+                                            <div class="num"></div>
+                                            <div class="name">{{ namelist[122].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                        <div id="U4" class="player m4">
+                                            <div class="num">U4</div>
+                                            <div class="name">{{ namelist[123].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td>
+                            <div class="hLine"></div>
+                        </td>
+                        <td class="turn2">
+                            <div  class="player">
+                                <div class="num"></div>
+                                <div class="name"></div>
+                            </div>
+                            <div  class="player">
+                                <div class="num"></div>
+                                <div class="name"></div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="hLine2"></div>
+                        </td>
+                        <td>
+                            <div class="player winner">
+                                <div class="num"></div>
+                                <div class="name"></div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td id="groupV" class="group">
+                <h2>V组</h2>
+                <table>
+                    <tr>
+                        <td id="gVt1">
+                            <table>
+                                <tr id="matchV-1" class="match">
+                                    <td>
+                                        <div id="V1" class="player m1">
+                                            <div class="num">V1</div>
+                                            <div class="name">{{ namelist[124].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                        <div id="V2" class="player m2">
+                                            <div class="num">V2</div>
+                                            <div class="name">{{ namelist[125].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr id="matchV-2" class="match">
+                                    <td>
+                                        <div id="V3" class="player m3">
+                                            <div class="num">V3</div>
+                                            <div class="name">{{ namelist[126].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                        <div id="V4" class="player m4">
+                                            <div class="num">V4</div>
+                                            <div class="name">{{ namelist[127].name }}</div>
+                                            <div class="promotion"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td>
+                            <div class="hLine"></div>
+                        </td>
+                        <td class="turn2">
+                            <div  class="player">
+                                <div class="num"></div>
+                                <div class="name"></div>
+                            </div>
+                            <div  class="player">
+                                <div class="num"></div>
+                                <div class="name"></div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="hLine2"></div>
+                        </td>
+                        <td>
+                            <div class="player winner">
+                                <div class="num"></div>
+                                <div class="name"></div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <script src="main.js"></script>
+</body>
+</html>
