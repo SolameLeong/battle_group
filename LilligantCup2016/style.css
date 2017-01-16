@@ -39,11 +39,13 @@ body {
     vertical-align: middle;
     border-radius: 4px;
     user-select: none;
+    text-decoration: none;
 }
 
 #groupBattle {
     margin: 0 auto;
     font-size: 14px;
+    min-width: 1200px;
 }
 .group {
     width: 600px;
@@ -64,6 +66,7 @@ body {
     margin-top: 3px;
     margin-bottom: 3px;
     height: 22px;
+    line-height: 22px;
 }
 
 .player>div {
@@ -77,6 +80,7 @@ body {
     width: 26px;
     height: 22px;
     background-color: #888888;
+    text-align: center;
 }
 
 .name {
