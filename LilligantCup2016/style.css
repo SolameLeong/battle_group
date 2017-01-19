@@ -10,7 +10,7 @@ body {
     display: inline-block;
 }
 
-#subTitle {
+.subTitle {
     color: white;
     margin-bottom: 50px;
 }
