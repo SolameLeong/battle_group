@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml">
 <head>
     <link rel="stylesheet" type="text/css" href="style.css">
     <meta charset="UTF-8">
@@ -17,42 +17,11 @@
 </div>
 
 <div id="locate">
-    <a type="button" class="btn btn-info groupButton" href="#group0">0 组</a>
-    <a type="button" class="btn btn-info groupButton" href="#group1">1 组</a>
-    <a type="button" class="btn btn-info groupButton" href="#group2">2 组</a>
-    <a type="button" class="btn btn-info groupButton" href="#group3">3 组</a>
-    <a type="button" class="btn btn-info groupButton" href="#group4">4 组</a>
-    <a type="button" class="btn btn-info groupButton" href="#group5">5 组</a>
-    <a type="button" class="btn btn-info groupButton" href="#group6">6 组</a>
-    <a type="button" class="btn btn-info groupButton" href="#group7">7 组</a>
-    <a type="button" class="btn btn-info groupButton" href="#group8">8 组</a>
-    <a type="button" class="btn btn-info groupButton" href="#group9">9 组</a>
-    <a type="button" class="btn btn-info groupButton" href="#groupA">A 组</a>
-    <a type="button" class="btn btn-info groupButton" href="#groupB">B 组</a>
-    <a type="button" class="btn btn-info groupButton" href="#groupC">C 组</a>
-    <a type="button" class="btn btn-info groupButton" href="#groupD">D 组</a>
-    <a type="button" class="btn btn-info groupButton" href="#groupE">E 组</a>
-    <a type="button" class="btn btn-info groupButton" href="#groupF">F 组</a>
-    <a type="button" class="btn btn-info groupButton" href="#groupG">G 组</a>
-    <a type="button" class="btn btn-info groupButton" href="#groupH">H 组</a>
-    <a type="button" class="btn btn-info groupButton" href="#groupI">I 组</a>
-    <a type="button" class="btn btn-info groupButton" href="#groupJ">J 组</a>
-    <a type="button" class="btn btn-info groupButton" href="#groupK">K 组</a>
-    <a type="button" class="btn btn-info groupButton" href="#groupL">L 组</a>
-    <a type="button" class="btn btn-info groupButton" href="#groupM">M 组</a>
-    <a type="button" class="btn btn-info groupButton" href="#groupN">N 组</a>
-    <a type="button" class="btn btn-info groupButton" href="#groupO">O 组</a>
-    <a type="button" class="btn btn-info groupButton" href="#groupP">P 组</a>
-    <a type="button" class="btn btn-info groupButton" href="#groupQ">Q 组</a>
-    <a type="button" class="btn btn-info groupButton" href="#groupR">R 组</a>
-    <a type="button" class="btn btn-info groupButton" href="#groupS">S 组</a>
-    <a type="button" class="btn btn-info groupButton" href="#groupT">T 组</a>
-    <a type="button" class="btn btn-info groupButton" href="#groupU">U 组</a>
-    <a type="button" class="btn btn-info groupButton" href="#groupV">V 组</a>
+    <a type="button" class="btn" v-for="number in groupNumbers" v-bind:href="generate_id(number)">{{number}} 组</a>
 </div>
 
 <div id="group-battle">
-    <div class="group" v-for="number, n in groupNumbers">
+    <div class="group" v-for="number, n in groupNumbers" v-bind:id="get_group(number)">
         <h2>{{ number }}组</h2>
         <table>
             <tr>
