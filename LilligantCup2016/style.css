@@ -43,7 +43,7 @@ body {
 }
 
 #group-battle {
-    margin: 0 auto;
+    margin: 50px auto;
     font-size: 14px;
     width: 1210px;
 }
@@ -134,3 +134,9 @@ body {
 .winner {
     margin-left: -4px;
 }
+
+footer {
+    clear: left;
+    height: 50px;
+}
+
