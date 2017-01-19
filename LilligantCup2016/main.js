@@ -1,3 +1,4 @@
+var v;
 window.onload = function () {
     var a = new Vue({
         el: '#locate',
@@ -21,7 +22,7 @@ window.onload = function () {
             match: null
         },
         mounted: function () {
-            this.$http.get('./information.json').then(function (response) {
+            this.$http.get('data/information.json').then(function (response) {
                 return response.json()
             }).then(function (data) {
                 this.match = data.match;
