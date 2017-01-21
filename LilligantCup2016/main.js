@@ -62,7 +62,7 @@ window.onload = function () {
         data: {
             round: null,
             plays: [],
-            current: 1,
+            current: 3,
             swiss_matches: [],
             swiss_players: []
         },
@@ -84,12 +84,14 @@ window.onload = function () {
             },
             get_name: function (index, round) {
                 var tmp = this.swiss_matches[round][index];
+                if (tmp === null) return"";
                 console.log(tmp);
                 tmp = Number(tmp);
                 return this.swiss_players[tmp].id;
             },
             get_marks: function (index,round) {
                 var tmp = this.swiss_matches[round][index];
+                if (tmp === null) return"";
                 console.log(tmp);
                 tmp = Number(tmp);
                 return this.swiss_players[tmp].marks;

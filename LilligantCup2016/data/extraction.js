@@ -55,7 +55,7 @@ fs.readFile('players.txt', 'utf8', function (err, buf) {
             fs.readFile('swiss_pas.txt', 'utf8', function (err, buf) {
                 if (err) return err;
 
-                info.swiss_match = {};
+                info.swiss_match = [];
                 var arr = buf.toString().split("\n");
 
                 for (var i = 0; i < arr.length; i++) {
