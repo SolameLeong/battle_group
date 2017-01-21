@@ -13,6 +13,7 @@ body {
 .subTitle {
     color: white;
     margin-bottom: 50px;
+    clear: both;
 }
 
 #locate {
@@ -42,6 +43,66 @@ body {
     text-decoration: none;
 }
 
+
+#swiss_pas{
+    width: 1080px;
+    margin: 30px auto;
+}
+#swiss_pas > div{
+    margin: 20px auto;
+}
+.btn_r {
+    margin-right: 10px;
+    margin-top: 5px;
+    width: 80px;
+    color: #fff;
+    background-color: #5bc0de;
+    border-color: #46b8da;
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 40px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    border-radius: 4px;
+    user-select: none;
+    text-decoration: none;
+}
+.swiss_match {
+    border: 1px solid black;
+    height: 150px;
+    width: 500px;
+    margin: 0 10px;
+    float: left;
+}
+.swiss_match td {
+    width: 181px;
+}
+.swiss_player{
+    background-color: #222222;
+    color: #ffffff;
+    width: 150px;
+    padding: 1px 15px;
+}
+.swiss_name {
+    font-size: 17px;
+}
+.marks{
+    font-size: 12px;
+}
+
+.battle_line {
+    background-color: #ffffff;
+    height: 2px;
+    width: 50px;
+
+}
+
+
+/*小组赛*/
 #group-battle {
     margin: 50px auto;
     font-size: 14px;

@@ -13,12 +13,40 @@
     <h1>百度口袋妖怪吧寒假实机对战大赛</h1>
 </div>
 <!--瑞士轮区域-->
-
+<div class="subTitle">
+    <h2>瑞士轮对阵表</h2>
+</div>
+<div id="swiss_pas">
+    <div>
+        <button class="btn_r" v-for="r in round" v-on:click="current = r - 1">{{get_round(r)}}</button>
+    </div>
+    <table class="swiss_match" v-for="n in plays">
+        <tr>
+            <td>
+                <div class="swiss_player">
+                    <p class="swiss_name">{{get_name(n*2, current)}}</p>
+                    <p class="marks">{{get_marks(n*2, current)}}</p>
+                </div>
+            </td>
+            <td>
+                <div class="battle_line"></div>
+            </td>
+            <td>VS</td>
+            <td>
+                <div class="battle_line"></div>
+            </td>
+            <td>
+                <div class="swiss_player">
+                    <p class="swiss_name">{{get_name(n*2+1, current)}}</p>
+                    <p class="marks">{{get_marks(n*2+1, current)}}</p>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>
 
 <!--小组赛区域-->
-<div class="subTitle">
-    <h2>小组对阵表</h2>
-</div>
+<h2 class="subTitle">小组对阵表</h2>
 <div id="locate">
     <a type="button" class="btn" v-for="number in groupNumbers" v-bind:href="generate_id(number)">{{number}} 组</a>
 </div>
