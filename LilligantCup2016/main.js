@@ -62,7 +62,7 @@ window.onload = function () {
             data: {
                 round: null,
                 plays: [],
-                current: 3,
+                current: 4,
                 swiss_matches: [],
                 swiss_players: []
             },
@@ -83,7 +83,7 @@ window.onload = function () {
                     return tmp.concat("轮");
                 },
                 get_name: function (index, round) {
-                    var present = 3;
+                    var present = 4;
                     if (round > present) return '';
                     var tmp = this.swiss_matches[round][index];
                     if (tmp === null) return "";
@@ -91,7 +91,7 @@ window.onload = function () {
                     return this.swiss_players[tmp].id;
                 },
                 get_marks: function (index, round) {
-                    var present = 3;
+                    var present = 4;
                     if (round > present) return "";
                     var tmp = this.swiss_matches[round][index];
                     if (tmp === null) return "";
