@@ -17,6 +17,56 @@ body {
     clear: both;
 }
 
+#knockout {
+    font-size: 14px;
+    width: 664px;
+    margin: 50px auto;
+}
+
+#knockout .player {
+    margin-top: 2px;
+    margin-bottom: 3px;
+    height: 22px;
+    line-height: 22px;
+}
+
+.promotion_line {
+    height: 2px;
+    width: 50px;
+    background-color: #ffffff;
+    margin-left: -12px;
+}
+
+.to2 {
+    height: 110px;
+}
+
+.to2 .player {
+    margin-left: -10px;
+}
+
+.vertical {
+    width: 2px;
+    height: 110px;
+    background-color: #ffffff;
+    margin-left: -9px;
+}
+
+.horizontal {
+    height: 2px;
+    width: 50px;
+    background-color: #ffffff;
+    margin-left: -11px;
+}
+
+.to_final div {
+    margin-left: -4px;
+}
+
+.final div {
+    margin-left: -5px;
+}
+
 #locate {
     width: 780px;
     margin: 50px auto;
@@ -44,15 +94,21 @@ body {
     text-decoration: none;
 }
 
+.knockout_promotion {
+    height: 110px;
+    margin-left: -4px;
+}
 
-#swiss_pas{
+#swiss_pas {
     height: 1400px;
     width: 1080px;
     margin: 30px auto;
 }
-#swiss_pas > div{
+
+#swiss_pas > div {
     margin: 20px auto;
 }
+
 .btn_r {
     margin-right: 10px;
     margin-top: 5px;
@@ -73,6 +129,7 @@ body {
     user-select: none;
     text-decoration: none;
 }
+
 .swiss_match {
     border: 1px solid black;
     height: 150px;
@@ -80,20 +137,24 @@ body {
     margin: 0 10px;
     float: left;
 }
+
 .swiss_match td {
     width: 181px;
 }
-.swiss_player{
+
+.swiss_player {
     background-color: #222222;
     color: #ffffff;
     height: 86px;
     width: 150px;
     padding: 1px 15px;
 }
+
 .swiss_name {
     font-size: 17px;
 }
-.marks{
+
+.marks {
     font-size: 12px;
 }
 
@@ -104,22 +165,24 @@ body {
 
 }
 
-
 /*小组赛*/
 #group-battle {
     margin: 50px auto;
     font-size: 14px;
     width: 1210px;
 }
+
 .group {
     width: 600px;
     border: 1px solid black;
     float: left;
 }
+
 .group > table {
     margin: 0 auto;
 }
-.match>td {
+
+.match > td {
     padding: 0;
 }
 
@@ -127,16 +190,18 @@ body {
     width: 126px;
     padding: 0;
 }
-.player {
+
+#group-battle .player {
     margin-top: 3px;
     margin-bottom: 3px;
     height: 22px;
     line-height: 22px;
 }
 
-.player>div {
+.player > div {
     float: left;
 }
+
 .match {
     margin-top: -2px;
 }
@@ -149,7 +214,7 @@ body {
 }
 
 .name {
-    width:120px;
+    width: 120px;
     height: 22px;
     background-color: #222222;
 }
@@ -157,44 +222,52 @@ body {
 .promotion {
     height: 24px;
     float: left;
-    margin-top: -2px;
+    margin-top: -1px;
     border: #ffffff solid 0;
 }
+
 .m1 .promotion {
     border-bottom-width: 2px;
     width: 14px;
 }
+
 .m2 .promotion {
     width: 12px;
     height: 28px;
     border-right-width: 2px;
 }
+
 .m3 .promotion {
     width: 12px;
-    height: 27px;
+    height: 28px;
     margin-top: -4px;
     border-right-width: 2px;
 }
+
 .m4 .promotion {
     width: 14px;
     margin-top: -3px;
     border-top-width: 2px;
 }
+
 .hLine {
     width: 35px;
     height: 2px;
     background-color: #ffffff;
     margin-left: -8px;
 }
+
 .hLine2 {
     width: 35px;
     height: 2px;
     background-color: #ffffff;
     margin-left: -4px;
 }
+
 .turn2 div {
     margin-left: -2px;
 }
+
 .winner {
     margin-left: -4px;
 }

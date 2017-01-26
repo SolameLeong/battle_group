@@ -12,6 +12,123 @@
 <div id="mainTitle">
     <h1>百度口袋妖怪吧寒假实机对战大赛</h1>
 </div>
+<!--淘汰赛区域-->
+<h2 class="subTitle">淘汰赛对阵表</h2>
+<table id="knockout">
+    <tr>
+        <td>
+            <table>
+                <tr>
+                    <td>
+                        <div class="player m1">
+                            <div class="name">bbtsan</div>
+                            <div class="promotion"></div>
+                        </div>
+                        <div class="player m2">
+                            <div class="name">Golden_Halo</div>
+                            <div class="promotion"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="player m3">
+                            <div class="name">Azumarill</div>
+                            <div class="promotion"></div>
+                        </div>
+                        <div class="player m4">
+                            <div class="name">狼与旅途中的人</div>
+                            <div class="promotion"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="player m1">
+                            <div class="name">龙天王Lance</div>
+                            <div class="promotion"></div>
+                        </div>
+                        <div class="player m2">
+                            <div class="name">风晓得benny</div>
+                            <div class="promotion"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="player m3">
+                            <div class="name">星中的飘雪</div>
+                            <div class="promotion"></div>
+                        </div>
+                        <div class="player m4">
+                            <div class="name">摳腳大漢NO1</div>
+                            <div class="promotion"></div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </td>
+        <td>
+            <table>
+                <tr>
+                    <td class="knockout_promotion">
+                        <div class="promotion_line"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="knockout_promotion">
+                        <div class="promotion_line"></div>
+                    </td>
+                </tr>
+            </table>
+        </td>
+        <td>
+            <table>
+                <tr>
+                    <td class="to2">
+                        <div class="player m1">
+                            <div class="name">Golden_Halo</div>
+                            <div class="promotion"></div>
+                        </div>
+                        <div class="player m2">
+                            <div class="name">狼与旅途中的人</div>
+                            <div class="promotion"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="to2">
+                        <div class="player m3">
+                            <div class="name">风晓得benny</div>
+                            <div class="promotion"></div>
+                        </div>
+                        <div class="player m4">
+                            <div class="name">星中的飘雪</div>
+                            <div class="promotion"></div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </td>
+        <td>
+            <div class="vertical"></div>
+        </td>
+        <td>
+            <div class="horizontal"></div>
+        </td>
+        <td class="final">
+            <div class="name player">Golden_Halo</div>
+            <div class="name player">风晓得benny</div>
+        </td>
+        <td class="to_final">
+            <div class="horizontal"></div>
+        </td>
+        <td>
+            <div class="player winner name"></div>
+        </td>
+    </tr>
+</table>
+
 <!--瑞士轮区域-->
 <div class="subTitle">
     <h2>瑞士轮对阵表</h2>
@@ -50,7 +167,6 @@
 <div id="locate">
     <a type="button" class="btn" v-for="number in groupNumbers" v-bind:href="generate_id(number)">{{number}} 组</a>
 </div>
-
 <div id="group-battle">
     <div class="group" v-for="number, n in groupNumbers" v-bind:id="get_group(number)">
         <h2>{{ number }}组</h2>
